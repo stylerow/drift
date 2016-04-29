@@ -1,6 +1,6 @@
 ![imgix logo](https://assets.imgix.net/imgix-logo-web-2014.pdf?page=2&fm=png&w=200&h=200)
 
-# Drift [![Build Status](https://travis-ci.org/imgix/drift.svg?branch=master)](https://travis-ci.org/imgix/drift)
+# Drift [![Build Status](https://travis-ci.org/imgix/drift.svg?branch=master)](https://travis-ci.org/imgix/drift) [![Slack Status](http://slack.imgix.com/badge.svg)](http://slack.imgix.com)
 
 Easily add "zoom on hover" functionality to your site's images. Lightweight, no-dependency JavaScript.
 
@@ -19,11 +19,13 @@ Easily add "zoom on hover" functionality to your site's images. Lightweight, no-
 * **Bower**: `bower install drift`
 * **Manual**: [Download](https://github.com/imgix/drift/archive/master.zip) and use `dist/Drift.min.js` or `dist/Drift.js`
 
+If your build process will re-run `dist/Drift.js` or `dist/Drift.min.js` through Browserify, you'll need to add `noParse: ['drift-zoom']` to your Browserify config. If you skip this, Browserify will attempt to re-require Drift's dependencies which have already been inlined.
+
 
 <a name="usage"></a>
 ## Usage
 
-Once you've installed Drift via one of the above methods, you're ready to get started. There are no dependencies, so you can just start making cool stuff. Check out the [announcement blog post](http://blog.imgix.com/TODO) for a demo, or take a peek here: https://imgix.github.io/drift. Here's an example of the most basic possible implementation:
+Once you've installed Drift via one of the above methods, you're ready to get started. There are no dependencies, so you can just start making cool stuff. Check out the [announcement blog post](http://blog.imgix.com/2016/01/06/better-lightbox-zoom-viewer-with-imgix.html) for a demo, or take a peek here: https://imgix.github.io/drift. Here's an example of the most basic possible implementation:
 
 ``` html
 <img src="http://assets.imgix.net/dog.png?w=400" data-zoom="http://assets.imgix.net/dog.png?w=1200">
@@ -84,7 +86,7 @@ var options = {
 	injectBaseStyles: true,
 };
 
-new Luminous(document.querySelector('img'), options);
+new Drift(document.querySelector('img'), options);
 ```
 
 
@@ -105,4 +107,4 @@ We support the latest version of Google Chrome (which [automatically updates](ht
 <a name="meta"></a>
 ## Meta
 
-Drift was made by [imgix](http://imgix.com). It's licensed under the BSD 2-Clause license (see the [license file](https://github.com/imgix/drift/blob/master/license.md) for more info). Any contribution is absolutely welcome, but please review the [contribution guidelines](https://github.com/imgix/drift/blob/master/contributing.md) before getting started.
+Drift was made by [imgix](http://imgix.com). It's licensed under the BSD 2-Clause license (see the [license file](https://github.com/imgix/drift/blob/master/LICENSE.md) for more info). Any contribution is absolutely welcome, but please review the [contribution guidelines](https://github.com/imgix/drift/blob/master/CONTRIBUTING.md) before getting started.

@@ -1,8 +1,8 @@
 {
   "name": "drift-zoom",
-  "version": "0.1.1",
+  "version": "0.1.7",
   "description": "Easily add \"zoom on hover\" functionality to your site's images. Lightweight, no-dependency JavaScript.",
-  "main": "index.js",
+  "main": "dist/Drift.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,7 +12,8 @@
   },
   "keywords": [
     "javascript",
-    "lightbox"
+    "zoom",
+    "hover"
   ],
   "author": "imgix",
   "license": "MIT",
