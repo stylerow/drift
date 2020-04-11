@@ -3,7 +3,7 @@ import { addClasses, removeClasses } from "./util/dom";
 
 // All officially-supported browsers have this, but it's easy to
 // account for, just in case.
-const divStyle = document.createElement("div").style;
+const divStyle = typeof document === "undefined" ? null : document.createElement("div").style
 
 const HAS_ANIMATION =
   typeof document === "undefined" ? false : "animation" in divStyle || "webkitAnimation" in divStyle;
